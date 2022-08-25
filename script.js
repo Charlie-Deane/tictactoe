@@ -27,14 +27,24 @@ const GameBoard = () =>{
     //create running board variable
     let _spaces = _spaces_init;
 
+    removeAllChildNodes = (parent) => {
+        while (parent.firstChild) {
+            parent.removeChild(parent.firstChild);
+        }
+    }
+
     //zeroes out the board
     initialize = () => {
-        const garbages = document.querySelectorAll('.icon');
-        while(garbages.length > 0){
-            garbages[0].remove();
-            garbages = document.querySelectorAll('.icon');
-        }
-        _spaces = _spaces_init;
+        removeAllChildNodes(space_1);
+        removeAllChildNodes(space_2);
+        removeAllChildNodes(space_3);
+        removeAllChildNodes(space_4);
+        removeAllChildNodes(space_5);
+        removeAllChildNodes(space_6);
+        removeAllChildNodes(space_7);
+        removeAllChildNodes(space_8);
+        removeAllChildNodes(space_9);
+        _spaces = [['','',''],['','',''],['','','']];
     };
 
     //draw the board
