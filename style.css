@@ -47,6 +47,8 @@ table {
 	border-spacing: 0;
 }
 
+/* -- END MEYER RESET --- */
+
 body{
     background-color: black;
     color: white;
